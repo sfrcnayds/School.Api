@@ -1,0 +1,14 @@
+C:\Users\Sefercan\source\repos\School.API\School.API\bin\Debug\netcoreapp2.2\School.API.deps.json
+C:\Users\Sefercan\source\repos\School.API\School.API\bin\Debug\netcoreapp2.2\School.API.runtimeconfig.json
+C:\Users\Sefercan\source\repos\School.API\School.API\bin\Debug\netcoreapp2.2\School.API.runtimeconfig.dev.json
+C:\Users\Sefercan\source\repos\School.API\School.API\bin\Debug\netcoreapp2.2\School.API.dll
+C:\Users\Sefercan\source\repos\School.API\School.API\obj\Debug\netcoreapp2.2\School.API.csprojAssemblyReference.cache
+C:\Users\Sefercan\source\repos\School.API\School.API\obj\Debug\netcoreapp2.2\School.API.csproj.CoreCompileInputs.cache
+C:\Users\Sefercan\source\repos\School.API\School.API\obj\Debug\netcoreapp2.2\School.API.RazorAssemblyInfo.cache
+C:\Users\Sefercan\source\repos\School.API\School.API\obj\Debug\netcoreapp2.2\School.API.RazorAssemblyInfo.cs
+C:\Users\Sefercan\source\repos\School.API\School.API\obj\Debug\netcoreapp2.2\School.API.AssemblyInfoInputs.cache
+C:\Users\Sefercan\source\repos\School.API\School.API\obj\Debug\netcoreapp2.2\School.API.AssemblyInfo.cs
+C:\Users\Sefercan\source\repos\School.API\School.API\obj\Debug\netcoreapp2.2\School.API.RazorTargetAssemblyInfo.cache
+C:\Users\Sefercan\source\repos\School.API\School.API\bin\Debug\netcoreapp2.2\School.API.pdb
+C:\Users\Sefercan\source\repos\School.API\School.API\obj\Debug\netcoreapp2.2\School.API.dll
+C:\Users\Sefercan\source\repos\School.API\School.API\obj\Debug\netcoreapp2.2\School.API.pdb
