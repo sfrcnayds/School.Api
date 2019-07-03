@@ -17,7 +17,7 @@ namespace School.API.Controllers
     {
         private readonly SchoolContext _context;
 
-        public CoursesController(SchoolContext context)
+         public CoursesController(SchoolContext context)
         {
             _context = context;
         }

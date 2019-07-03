@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using School.API.Dtos;
 using School.API.Models;
 
 namespace School.API.Controllers
@@ -72,6 +73,18 @@ namespace School.API.Controllers
 
             return CreatedAtAction("GetStudent", new {id = student.Id}, student);
         }
+
+        [HttpPost("addMark")]
+        public async Task<ActionResult<Student>> AddMark(AddMarkDto studentMark)
+        {
+            var studentCourse = await _context.StudentCourse.FindAsync(studentMark.CourseStudentId);
+            studentCourse.Mark = studentMark.Mark;
+            _context.StudentCourse.Update(studentCourse);
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
 
         // DELETE: api/Students/5
         [HttpDelete("{id}")]
