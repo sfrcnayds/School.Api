@@ -1,18 +1,22 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 
 namespace School.API.Models
 {
     public partial class SchoolContext : DbContext
     {
-        public SchoolContext()
+        public IConfiguration Configuration { get; }
+        public SchoolContext(IConfiguration configuration)
         {
+            Configuration = configuration;
         }
 
-        public SchoolContext(DbContextOptions<SchoolContext> options)
+        public SchoolContext(DbContextOptions<SchoolContext> options, IConfiguration configuration)
             : base(options)
         {
+            Configuration = configuration;
         }
 
         public virtual DbSet<Course> Course { get; set; }
@@ -25,8 +29,7 @@ namespace School.API.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=School;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             }
         }
 

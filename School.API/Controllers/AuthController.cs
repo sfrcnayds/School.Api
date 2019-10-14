@@ -53,7 +53,13 @@ namespace School.API.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
-            return Ok(JsonConvert.SerializeObject(tokenString));
+            var response = new LoginStudentResponse
+            {
+                Id = user.Id,
+                Name = user.Name + " " + user.Surname,
+                Token = tokenString
+            };
+            return Ok(response);
         }
 
         [HttpPost("loginTeacher")]
@@ -75,12 +81,18 @@ namespace School.API.Controllers
                     new Claim(ClaimTypes.Name, teacher.Name + " " + teacher.Surname)
                 }),
                 Expires = DateTime.Now.AddDays(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),SecurityAlgorithms.HmacSha512Signature )
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha512Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
-
-            return Ok(JsonConvert.SerializeObject(tokenString));
+            var response = new LoginStudentResponse
+            {
+                Id = teacher.Id,
+                Name = teacher.Name + " " + teacher.Surname,
+                Token = tokenString
+            };
+            return Ok(response);
         }
     }
 }
